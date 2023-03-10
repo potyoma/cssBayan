@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  display: none;
+}
+
+.accordion {
+  padding: 1.5rem;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input:checked + .meme-label {
+  background: #1a252f;
+}
+
+input:checked + .meme-label::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+input:checked ~ .meme-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.meme-img {
+  width: 20rem;
+}
+
+.meme:hover {
+  cursor: pointer;
+}
+
+/* Mobile */
+@media screen and (min-width: 320) {
+}
+
+/* Tablet */
+@media screen and (min-width: 820) {
+}
+
+/* Desktop */
+@media screen and (min-width: 1281) {
+}
