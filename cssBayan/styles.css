@@ -1,9 +1,25 @@
 body {
   display: flex;
   justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 input {
+  display: none;
+}
+
+.meme-header {
+  margin-bottom: 1rem;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+}
+
+.meme-header:hover {
+  cursor: pointer;
+}
+
+.close {
   display: none;
 }
 
@@ -13,19 +29,28 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #0059d9;
 }
 
-input:checked + .meme-label {
+/* input:checked + .meme-label {
   background: #1a252f;
-}
+} */
 
-input:checked + .meme-label::after {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
 input:checked ~ .meme-content {
   max-height: 100vh;
   padding: 1em;
+}
+
+input:checked ~ label {
+  color: #1a252f;
+}
+
+input:checked ~ label.plus {
+  display: none;
+}
+
+input:checked ~ label.close {
+  display: block;
 }
 
 .meme-img {
@@ -34,6 +59,15 @@ input:checked ~ .meme-content {
 
 .meme:hover {
   cursor: pointer;
+  color: #1a252f;
+}
+
+.meme:hover .plus {
+  display: none;
+}
+
+.meme:hover .close {
+  display: block;
 }
 
 /* Mobile */
