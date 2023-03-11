@@ -60,7 +60,7 @@ input:checked ~ label > .close {
 }
 
 .meme-img {
-  width: 20rem;
+  width: 15rem;
 }
 
 /* Mobile */
@@ -79,6 +79,10 @@ input:checked ~ label > .close {
   .accordion {
     width: 80%;
   }
+
+  .meme-img {
+    width: 25rem;
+  }
 }
 
 /* Desktop */
@@ -89,6 +93,10 @@ input:checked ~ label > .close {
 
   .accordion {
     width: 60rem;
+  }
+
+  .meme-img {
+    width: 30rem;
   }
 }
 
@@ -106,10 +114,6 @@ input:checked ~ label > .close {
     justify-content: center;
     -webkit-transition: all 1s;
     transition: all 1s;
-  }
-
-  .meme:hover .meme-content > img {
-    transform: scale(1);
   }
 
   .meme:hover .plus {
