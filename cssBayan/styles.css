@@ -9,6 +9,15 @@ input {
   display: none;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .meme {
   margin-bottom: 1rem;
 }
@@ -48,6 +57,16 @@ input {
   justify-content: space-between;
 }
 
+.meme-img {
+  animation: fadeIn 2s;
+  width: 15rem;
+}
+
+.plus,
+.close {
+  animation: fadeIn 2s;
+}
+
 input:checked ~ .meme-label > .meme-content {
   display: flex;
   justify-content: center;
@@ -57,16 +76,12 @@ input:checked ~ label {
   color: #1a252f;
 }
 
-input:checked ~ label > .plus {
+input:checked ~ label > .meme-name > .plus {
   display: none;
 }
 
-input:checked ~ label > .close {
+input:checked ~ label > .meme-name > .close {
   display: block;
-}
-
-.meme-img {
-  width: 15rem;
 }
 
 /* Mobile */
